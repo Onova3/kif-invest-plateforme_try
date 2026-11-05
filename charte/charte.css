@@ -1,0 +1,32 @@
+/* KIF Invest visual charter: the single file shared by the public site, the portal and the back-office. */
+@font-face{font-family:"Alegreya";src:url("fonts/alegreya-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya";src:url("fonts/alegreya-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya";src:url("fonts/alegreya-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url("fonts/alegreya-sans-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url("fonts/alegreya-sans-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{--surface:#f6faf9;--surface-raised:#ffffff;--lagon-soft:#ddf3f0;--epi-soft:#fdf1d6;--fjkm-soft:#eceafb;--alerte-soft:#fbeae3;--line:#cfe0dd;--line-strong:#6a8784;--ink:#1d2b33;--ink-muted:#4f6169;--fjkm:#170577;--lagon:#00c6bb;--lagon-fonce:#00706a;--on-lagon-fonce:#ffffff;--on-fjkm:#ffffff;--epi:#f0a800;--epi-fonce:#7a4f00;--alerte:#853d25}
+@media(prefers-color-scheme:dark){:root{--surface:#0e1c22;--surface-raised:#152830;--lagon-soft:#16343a;--epi-soft:#33291a;--fjkm-soft:#22224a;--alerte-soft:#3a2219;--line:#2a444b;--line-strong:#7d9a9b;--ink:#eaf2f1;--ink-muted:#a9bdbf;--fjkm:#b8b0f5;--lagon-fonce:#3fd9cf;--on-lagon-fonce:#0e1c22;--on-fjkm:#0e1c22;--epi-fonce:#f5c460;--alerte:#f0a28a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:400 18px/1.6 "Alegreya Sans",system-ui,sans-serif;font-variant-numeric:lining-nums tabular-nums}
+h1,h2,h3{font-family:"Alegreya",Georgia,serif;color:var(--fjkm);font-weight:700;line-height:1.2;text-align:left}
+h1{font-size:2rem;margin:.25rem 0 1rem}h2{font-size:1.45rem;margin:0 0 .75rem}h3{font-size:1.2rem;margin:0 0 .35rem}
+a{color:var(--lagon-fonce);text-underline-offset:.15em}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--fjkm);outline-offset:2px}
+p,li{max-width:65ch}
+.surtitre{display:block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lagon-fonce);margin-bottom:.25rem}
+.confiance{background:var(--alerte-soft);padding:.6rem 16px;font-size:1rem;line-height:1.4}.confiance strong{color:var(--alerte);margin-right:.35rem}
+.entete{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;align-items:center;justify-content:space-between;max-width:70rem;margin:0 auto;padding:.75rem 16px}
+.marque{font:700 1.5rem "Alegreya",Georgia,serif;color:var(--fjkm);text-decoration:none}
+.entete nav{display:flex;flex-wrap:wrap;gap:.1rem 1rem}.entete nav a{padding:.2rem 0}.entete nav a[aria-current]{font-weight:700;color:var(--fjkm)}
+.lamba{height:12px;background:repeating-linear-gradient(90deg,var(--lagon) 0 32px,var(--epi) 32px 48px,var(--fjkm) 48px 64px)}
+main{max-width:70rem;margin:0 auto;padding:1.5rem 16px 3rem}
+section{margin-top:48px}
+.btn,button{display:inline-block;background:var(--lagon-fonce);color:var(--on-lagon-fonce);border:1px solid var(--lagon-fonce);border-radius:6px;padding:.55rem 1rem;font:700 1rem "Alegreya Sans",system-ui,sans-serif;text-decoration:none;cursor:pointer;margin-top:.5rem}
+.btn.secondaire,button.secondary{background:transparent;color:var(--lagon-fonce)}
+button.danger{background:transparent;color:var(--alerte);border-color:var(--alerte)}
+.carte,.card{background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 4px rgba(23,5,119,.07);padding:1rem 1.25rem;margin-bottom:1rem;overflow-x:auto}
+.grille{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}.pastilles li{background:var(--lagon-soft);border-radius:999px;padding:.15rem .8rem}
+.devise{background:var(--epi-soft);border-radius:12px;padding:1rem 1.25rem}.devise em{font:italic 400 1.4rem "Alegreya",Georgia,serif;color:var(--fjkm);display:block}
+.icone{width:2.5rem;height:2.5rem;fill:none;stroke:var(--epi-fonce);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.arche{border-radius:999px 999px 12px 12px;background:var(--lagon-soft);min-height:16rem;display:grid;place-items:center}.arche .icone{width:6rem;height:6rem}

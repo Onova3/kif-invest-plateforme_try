@@ -1,0 +1,16 @@
+/* Portal and back-office screens. Colours and fonts come from charte/charte.css only. */
+label{display:block;font-weight:700;margin:.8rem 0 .2rem}
+input,select,textarea{width:100%;max-width:32rem;padding:.5rem .6rem;border:1px solid var(--line-strong);border-radius:6px;font:inherit;background:var(--surface-raised);color:var(--ink)}
+input[type=checkbox],input[type=radio]{width:auto}
+table{width:100%;border-collapse:collapse;font-size:1rem}th,td{text-align:left;padding:.5rem;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--ink-muted)}
+.num{text-align:right}.muted{color:var(--ink-muted)}.mono{font-family:ui-monospace,Consolas,monospace;font-size:.95rem;overflow-wrap:anywhere}.inline{display:inline}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.msg{padding:.6rem .9rem;border-radius:6px;margin-bottom:1rem;background:var(--lagon-soft)}.msg.error{background:var(--alerte-soft);color:var(--alerte)}.msg.warning,.msg.info{background:var(--epi-soft)}
+.errorlist{color:var(--alerte);margin:.2rem 0;padding-left:0;list-style:none}
+.badge{display:inline-block;padding:0 .55rem;border-radius:999px;font-size:.9rem;background:var(--fjkm-soft)}.badge.ok{background:var(--lagon-soft)}.badge.warn{background:var(--epi-soft)}.badge.bad{background:var(--alerte-soft);color:var(--alerte)}
+.interne{background:var(--fjkm);color:var(--on-fjkm);padding:.2rem 16px;font-size:.9rem}
+.frise{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:.25rem;padding:0;margin:0 0 1rem}.frise li{border-top:6px solid var(--line);padding-top:.25rem;font-size:.9rem;color:var(--ink-muted)}.frise li.fait{border-color:var(--lagon-fonce)}.frise li.encours{border-color:var(--epi);color:var(--ink);font-weight:700}
+.action{background:var(--lagon-soft);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
+.tache{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+pre{white-space:pre-wrap}
+@media(max-width:640px){.frise{grid-template-columns:repeat(3,1fr)}h1{font-size:1.7rem}}
