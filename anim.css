@@ -1,7 +1,7 @@
 /* Motion layer. Content stays visible without JavaScript: hiding only applies under .js. */
 .progression{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--epi);transform:scaleX(0);transform-origin:left;z-index:10}
-.js .apparait{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
-.js .apparait.vu{opacity:1;transform:none}
+.js .apparait{transform:translateY(12px);transition:transform .45s ease}
+.js .apparait.vu{transform:none}
 .hero-texte>*{animation:monte .9s cubic-bezier(.2,.7,.2,1) both}.hero-texte>*:nth-child(2){animation-delay:.12s}.hero-texte>*:nth-child(3){animation-delay:.24s}.hero-texte>*:nth-child(4){animation-delay:.36s}
 @keyframes monte{from{transform:translateY(14px)}to{transform:none}}
 .nuage{animation:derive 38s ease-in-out infinite alternate}.n2{animation-duration:52s;animation-direction:alternate-reverse}
@@ -22,4 +22,4 @@
 .js .frise.vu li.encours{animation:pulse 1.8s ease-in-out 1.2s 2}
 @keyframes pulse{50%{transform:translateY(-3px)}}
 tr{transition:background-color .15s ease}tbody tr:hover,table tr:hover{background:var(--lagon-soft)}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .apparait{opacity:1;transform:none}.progression{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .apparait{transform:none}.progression{display:none}}

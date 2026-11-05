@@ -62,3 +62,17 @@ main.large{max-width:76rem}
 .hero-actions{flex-direction:column;gap:.75rem}
 }
 @media(max-width:760px){.entete{position:static}}
+
+/* Light and dark themes: device setting by default, visitor's choice wins. */
+:root{--surface:#f6faf9;--surface-raised:#ffffff;--lagon-soft:#ddf3f0;--epi-soft:#fdf1d6;--fjkm-soft:#eceafb;--alerte-soft:#fbeae3;--line:#cfe0dd;--line-strong:#6a8784;--ink:#1d2b33;--ink-muted:#4f6169;--fjkm:#170577;--lagon-fonce:#00706a;--on-lagon-fonce:#ffffff;--on-fjkm:#ffffff;--epi-fonce:#7a4f00;--alerte:#853d25;--accent-texte:#00706a;--lien-texte:#17322f;--trait-illus:#170577;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--surface:#0e1c22;--surface-raised:#152830;--lagon-soft:#16343a;--epi-soft:#33291a;--fjkm-soft:#22224a;--alerte-soft:#3a2219;--line:#2a444b;--line-strong:#7d9a9b;--ink:#eaf2f1;--ink-muted:#a9bdbf;--fjkm:#b8b0f5;--lagon-fonce:#3fd9cf;--on-lagon-fonce:#0e1c22;--on-fjkm:#0e1c22;--epi-fonce:#f5c460;--alerte:#f0a28a;--accent-texte:#3fd9cf;--lien-texte:#3fd9cf;--trait-illus:#b8b0f5;color-scheme:dark}}
+:root[data-theme=light]{--surface:#f6faf9;--surface-raised:#ffffff;--lagon-soft:#ddf3f0;--epi-soft:#fdf1d6;--fjkm-soft:#eceafb;--alerte-soft:#fbeae3;--line:#cfe0dd;--line-strong:#6a8784;--ink:#1d2b33;--ink-muted:#4f6169;--fjkm:#170577;--lagon-fonce:#00706a;--on-lagon-fonce:#ffffff;--on-fjkm:#ffffff;--epi-fonce:#7a4f00;--alerte:#853d25;--accent-texte:#00706a;--lien-texte:#17322f;--trait-illus:#170577;color-scheme:light}
+:root[data-theme=dark]{--surface:#0e1c22;--surface-raised:#152830;--lagon-soft:#16343a;--epi-soft:#33291a;--fjkm-soft:#22224a;--alerte-soft:#3a2219;--line:#2a444b;--line-strong:#7d9a9b;--ink:#eaf2f1;--ink-muted:#a9bdbf;--fjkm:#b8b0f5;--lagon-fonce:#3fd9cf;--on-lagon-fonce:#0e1c22;--on-fjkm:#0e1c22;--epi-fonce:#f5c460;--alerte:#f0a28a;--accent-texte:#3fd9cf;--lien-texte:#3fd9cf;--trait-illus:#b8b0f5;color-scheme:dark}
+.accent{color:var(--accent-texte)}
+main .lien{color:var(--lien-texte)}
+.temple path,.temple circle{stroke:var(--trait-illus)}
+input:disabled,textarea:disabled{color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1}
+.projet{background:#170577;color:#fff}
+.interne{background:#170577;color:#fff}
+.bascule{position:fixed;right:14px;bottom:14px;z-index:20;margin:0;background:var(--surface-raised);color:var(--ink);border:1px solid var(--line-strong);padding:.45rem .9rem;font-size:.85rem;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+
