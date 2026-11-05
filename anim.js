@@ -34,6 +34,15 @@
   setTimeout(reveal, 1500);
   window.addEventListener("scroll", function () { setTimeout(reveal, 400); }, { passive: true });
 
+  // Light that follows the pointer on glass cards.
+  document.querySelectorAll(".vitre").forEach(function (v) {
+    v.addEventListener("pointermove", function (e) {
+      var r = v.getBoundingClientRect();
+      v.style.setProperty("--x", e.clientX - r.left + "px");
+      v.style.setProperty("--y", e.clientY - r.top + "px");
+    });
+  });
+
   var bar = document.createElement("div");
   bar.className = "progression";
   bar.setAttribute("aria-hidden", "true");
